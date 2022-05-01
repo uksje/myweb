@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="md5.js"></script>
+    <script>
+    var token=localStorage.getItem('token')
+        if(token){
+            console.log('已登录')
+            window.location.href="index.html"
+      
+        }else{
+            console.log('未登录')    
+        }</script>
+</head>
+<body>
+    <div class="login">
+        <div class="form">
+            <div class="label">用户名</div>
+            <input type="text" id="username" placeholder="用户名">
+        </div>
+        <div class="form">
+            <div class="label">密码</div>
+            <input type="text" id="password" placeholder="密码">
+        </div>
+        <div class="form">
+            <button id="login" class="button">登录</button>
+        </div>
+        <div class="form">
+            <button id="register" class="button">注册</button>
+        </div>
+    </div>
+</body>
+<script src="login.js"></script>
+</html>
